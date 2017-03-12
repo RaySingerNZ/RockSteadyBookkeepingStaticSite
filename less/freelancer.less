@@ -1,8 +1,9 @@
 @import "variables.less";
 @import "mixins.less";
+@import url('https://fonts.googleapis.com/css?family=Martel');
 
 body {
-	font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	overflow-x: hidden;
 }
 
@@ -24,7 +25,7 @@ a.active {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	text-transform: uppercase;
 	font-weight: 700;
 }
@@ -87,7 +88,7 @@ header {
 	.intro-text {
 		.name {
 			display: block;
-			font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+			font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
 			text-transform: uppercase;
 			font-weight: 700;
 			font-size: 2em;
@@ -116,12 +117,44 @@ header {
 	}
 }
 
+
+.about {
+	text-align: center;
+	img {
+		// padding-top: 50px;
+		max-width: 400px;
+		display: block;
+		margin: 0 auto 20px;
+	}
+	.bio {
+		padding-top: 50px;
+	}
+}
+
+@media(min-width:768px) {
+	.about {
+		.intro-text {
+			.name {
+				font-size: 4.75em;
+			}
+			.skills {
+				font-size: 1.75em;
+			}
+		}
+		.bio {
+			padding-top: 50px;
+			text-align: left;
+		}
+	}
+}
+
 .navbar-custom {
 	background: @theme-primary;
-	font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	text-transform: uppercase;
 	font-weight: 700;
 	border: none;
+	border-bottom: 2px solid @theme-success;
 	a:focus {
 		outline: none;
 	}
@@ -134,11 +167,16 @@ header {
 			color: white;
 		}
 	}
+	img {
+		max-height: 40px;
+		padding-left: 15px;
+		padding-top: 7px;
+	}
 	.navbar-nav {
 		letter-spacing: 1px;
 		li {
 			a {
-				color: white;
+				color: @gray-base;
 				&:hover {
 					color: @theme-success;
 					outline: none;
@@ -188,6 +226,10 @@ header {
 	        -moz-transition: all 0.3s;
 	        transition: all 0.3s;
 	    }
+		img {
+			max-height: 60px;
+			padding-top: 0px;
+		}
     }
     .navbar-custom.affix {
         padding: 10px 0;
@@ -198,10 +240,12 @@ header {
 }
 
 section {
-    padding: 100px 0;
+    padding: 60px 0;
+	text-align: center;
     h2 {
     	margin: 0;
     	font-size: 3em;
+		padding-bottom: 30px;
     }
 }
 
@@ -212,14 +256,15 @@ section.success {
 
 @media(max-width:767px) {
 	section {
-		padding: 75px 0;
+		padding: 60px 0;
 	}
 	section.first {
-		padding-top: 75px;
+		padding-top: 60px;
 	}
 }
 
 #portfolio {
+	min-height: 300px;
     .portfolio-item {
         margin: 0 0 15px;
         right: 0;
@@ -337,14 +382,14 @@ footer {
 	}
 	.footer-above {
 		padding-top: 50px;
-		background-color: @theme-primary;
+		background-color: #000;
 	}
 	.footer-col {
 		margin-bottom: 50px;
 	}
 	.footer-below {
 		padding: 25px 0;
-		background-color: darken(@theme-primary, 5%);
+		background-color: darken(#000, 5%);
 	}
 }
 
