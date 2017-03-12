@@ -70,16 +70,20 @@ hr.star-primary:after {
 }
 header {
   text-align: center;
-  background: #EE4423;
+  background: #ac3520;
   color: white;
 }
 header .container {
   padding-top: 100px;
   padding-bottom: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
-header img {
+header .xero-logo img {
   display: block;
   margin: 0 auto 20px;
+  padding-top: 20px;
+  max-width: 100px;
 }
 header .intro-text .name {
   display: block;
@@ -95,7 +99,6 @@ header .intro-text .skills {
 @media (min-width: 768px) {
   header .container {
     padding-top: 200px;
-    padding-bottom: 100px;
   }
   header .intro-text .name {
     font-size: 4.75em;
@@ -125,6 +128,36 @@ header .intro-text .skills {
   .about .bio {
     padding-top: 50px;
     text-align: left;
+  }
+}
+section {
+  padding: 60px 0;
+  text-align: center;
+}
+section h2 {
+  margin: 0;
+  font-size: 3em;
+  padding-bottom: 30px;
+}
+section .contact-email {
+  font-size: 20px;
+}
+section.contrast {
+  background: #ac3520;
+  color: white;
+}
+section.contrast .services .col-lg-4 {
+  padding-top: 20px;
+}
+section.contact .details .col-md-6 {
+  padding-top: 30px;
+}
+@media (max-width: 767px) {
+  section {
+    padding: 60px 0;
+  }
+  section.first {
+    padding-top: 60px;
   }
 }
 .navbar-custom {
@@ -164,7 +197,7 @@ header .intro-text .skills {
 }
 .navbar-custom .navbar-nav li a:focus,
 .navbar-custom .navbar-nav li a:active {
-  color: white;
+  color: #000;
 }
 .navbar-custom .navbar-nav li.active a {
   color: white;
@@ -210,27 +243,6 @@ header .intro-text .skills {
   }
   .navbar-custom.affix .navbar-brand {
     font-size: 1.5em;
-  }
-}
-section {
-  padding: 60px 0;
-  text-align: center;
-}
-section h2 {
-  margin: 0;
-  font-size: 3em;
-  padding-bottom: 30px;
-}
-section.success {
-  background: #EE4423;
-  color: white;
-}
-@media (max-width: 767px) {
-  section {
-    padding: 60px 0;
-  }
-  section.first {
-    padding-top: 60px;
   }
 }
 #portfolio {

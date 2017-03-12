@@ -20,7 +20,7 @@ a:hover,
 a:focus,
 a:active,
 a.active {
-	color: @theme-success;
+	color: @theme-main;
 	outline: none;
 }
 
@@ -56,35 +56,44 @@ hr.star-light {
 }
 
 hr.star-light:after {
-    background-color: @theme-success;
+    background-color: @theme-main;
     color: white;
 }
 
 hr.star-primary {
-    border-color: @theme-primary;
+    border-color: @theme-white;
 }
 
 hr.star-primary:after {
     background-color: white;
-    color: @theme-primary;
+    color: @theme-white;
 }
 
 .img-centered {
 	margin: 0 auto;
 }
 
+// HEADER
+
 header {
 	text-align: center;
-	background: @theme-success;
+	background: @theme-main-darker;
 	color: white;
 	.container {
 		padding-top: 100px;
 		padding-bottom: 50px;
+		padding-left: 30px;
+		padding-right: 30px;
 	}
-	img {
-		display: block;
-		margin: 0 auto 20px;
+	.xero-logo {
+			img {
+			display: block;
+			margin: 0 auto 20px;
+			padding-top: 20px;
+			max-width: 100px;
+		}
 	}
+	
 	.intro-text {
 		.name {
 			display: block;
@@ -104,7 +113,7 @@ header {
 	header {
 		.container {
 			padding-top: 200px;
-			padding-bottom: 100px;
+			// padding-bottom: 100px;
 		}
 		.intro-text {
 			.name {
@@ -117,11 +126,11 @@ header {
 	}
 }
 
+// ABOUT
 
 .about {
 	text-align: center;
 	img {
-		// padding-top: 50px;
 		max-width: 400px;
 		display: block;
 		margin: 0 auto 20px;
@@ -148,13 +157,54 @@ header {
 	}
 }
 
+// SECTION
+section {
+    padding: 60px 0;
+	text-align: center;
+    h2 {
+    	margin: 0;
+    	font-size: 3em;
+		padding-bottom: 30px;
+    }
+	.contact-email {
+		font-size: 20px;
+	}
+}
+
+section.contrast {
+	background: @theme-main-darker;
+	color: white;
+	.services {
+		.col-lg-4 {
+			padding-top: 20px;
+		}
+	}
+}
+
+section.contact {
+	.details {
+		.col-md-6 {
+			padding-top: 30px;
+		}
+	}
+}
+
+@media(max-width:767px) {
+	section {
+		padding: 60px 0;
+	}
+	section.first {
+		padding-top: 60px;
+	}
+}
+
 .navbar-custom {
-	background: @theme-primary;
+	background: @theme-white;
 	font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	text-transform: uppercase;
 	font-weight: 700;
 	border: none;
-	border-bottom: 2px solid @theme-success;
+	border-bottom: 2px solid @theme-main;
 	a:focus {
 		outline: none;
 	}
@@ -178,23 +228,23 @@ header {
 			a {
 				color: @gray-base;
 				&:hover {
-					color: @theme-success;
+					color: @theme-main;
 					outline: none;
 				}
 				&:focus,
 				&:active {
-					color: white;
+					color: @gray-base;
 				}
 			}
 			&.active {
 				a {
 					color: white;
-					background: @theme-success;
+					background: @theme-main;
 					&:hover,
 					&:focus,
 					&:active {
 						color: white;
-						background: @theme-success;
+						background: @theme-main;
 					}
 				}
 			}
@@ -207,9 +257,9 @@ header {
 		border-color: white;
 		&:hover,
 		&:focus {
-			background-color: @theme-success;
+			background-color: @theme-main;
 			color: white;
-			border-color: @theme-success;
+			border-color: @theme-main;
 		}
 	}
 }
@@ -239,29 +289,7 @@ header {
 	}
 }
 
-section {
-    padding: 60px 0;
-	text-align: center;
-    h2 {
-    	margin: 0;
-    	font-size: 3em;
-		padding-bottom: 30px;
-    }
-}
 
-section.success {
-	background: @theme-success;
-	color: white;
-}
-
-@media(max-width:767px) {
-	section {
-		padding: 60px 0;
-	}
-	section.first {
-		padding-top: 60px;
-	}
-}
 
 #portfolio {
 	min-height: 300px;
@@ -274,7 +302,7 @@ section.success {
             max-width: 400px;
             margin: 0 auto;
             .caption {
-                background: fade(@theme-success, 90%);
+                background: fade(@theme-main, 90%);
                 position: absolute;
                 width: 100%;
                 height: 100%;
@@ -367,7 +395,7 @@ section.success {
 
 .floating-label-form-group-with-focus {
 	label {
-	    color: @theme-success;
+	    color: @theme-main;
 	}
 }
 
@@ -406,19 +434,19 @@ footer {
 	&:focus,
 	&:active,
 	&.active {
-		color: @theme-success;
+		color: @theme-main;
 		background: white;
 		border: solid 2px white;
 	}
 }
 
 .btn-primary {
-	.button-variant(white; @theme-primary; @theme-primary);
+	.button-variant(white; @theme-white; @theme-white);
 	font-weight: 700;
 }
 
 .btn-success {
-	.button-variant(white; @theme-success; @theme-success);
+	.button-variant(white; @theme-main; @theme-main);
 	font-weight: 700;
 }
 
@@ -494,7 +522,7 @@ footer {
             height:75px;
             width:1px;
             margin-left:35px;
-            background-color:@theme-primary;
+            background-color:@theme-white;
             transform: rotate(45deg);
             -ms-transform: rotate(45deg);
             /* IE 9 */
@@ -504,7 +532,7 @@ footer {
             .rl {
                 height:75px;
                 width:1px;
-                background-color:@theme-primary;
+                background-color:@theme-white;
                 transform: rotate(90deg);
                 -ms-transform: rotate(90deg);
                 /* IE 9 */
