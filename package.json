@@ -22,5 +22,8 @@
   "repository": {
     "type": "git",
     "url": ""
+  },
+  "dependencies": {
+    "gulp-copy": "^1.0.0"
   }
 }

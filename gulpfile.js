@@ -6,6 +6,7 @@ var cleanCSS = require('gulp-clean-css');
 var rename = require("gulp-rename");
 var uglify = require('gulp-uglify');
 var pkg = require('./package.json');
+var gulpCopy = require('gulp-copy');
 
 // Set the banner content
 var banner = ['/*!\n',
@@ -89,4 +90,22 @@ gulp.task('dev', ['browserSync', 'less', 'minify-css', 'minify-js'], function() 
     // Reloads the browser whenever HTML or JS files change
     gulp.watch('*.html', browserSync.reload);
     gulp.watch('js/**/*.js', browserSync.reload);
+});
+
+
+gulp.task('dist', function() {
+
+  return gulp.src([
+    '*.html',
+    'css/*.min.css',
+    'js/*.min.js',
+    'img/*.*',
+    'vendor/bootstrap/css/bootstrap.min.css',
+    'vendor/font-awesome/css/font-awesome.min.css',
+    'vendor/font-awesome/fonts/*',
+    'vendor/bootstrap/fonts/*',
+    'vendor/jquery/jquery.js',
+    'vendor/bootstrap/js/bootstrap.min.js'
+  ])
+    .pipe(gulpCopy('dist/src'));
 });
