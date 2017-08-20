@@ -82,7 +82,8 @@ header .certification-logo img {
   display: block;
   margin: 0 auto 20px;
   padding-top: 20px;
-  max-width: 140px;
+  width: 100%;
+  max-width: 300px;
 }
 header .intro-text .name {
   display: block;
