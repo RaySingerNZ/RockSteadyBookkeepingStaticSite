@@ -1,6 +1,6 @@
 /*!
  * Start Bootstrap - RockSteady v3.3.7+1 (RockSteadyBookkeeping.co.nz)
- * Copyright 2013-2017 RaySinger
+ * Copyright 2013-2018 RaySinger
  * Licensed under MIT ()
  */
 body {
@@ -121,6 +121,12 @@ header .intro-text .skills {
 }
 .about .bio img {
   max-width: 200px;
+}
+.about .badges {
+  padding-top: 30px;
+}
+.about .badges img {
+  max-height: 100px;
 }
 @media (min-width: 768px) {
   .about .intro-text .name {
